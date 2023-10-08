@@ -32,7 +32,7 @@ A Discord bot that allows you to play YouTube music and enhance the musical expe
    token=your_bot_token_here
    clientId=your_bot_client_id_here
    guildId=your_guild_id_here
-   MongoDBToken=your_mongodb_connection_uri_here
+   MongoDBToken=your_mongodb_token_here
    ```
 
 3. Invite it to your Discord server. Once you run the bot, you can see `(BOTNAME#ID) has logged into Discord!`
