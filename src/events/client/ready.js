@@ -1,3 +1,5 @@
+const { ActivityType } = require("discord.js");
+
 module.exports = {
   name: "ready",
   once: true,
@@ -7,7 +9,7 @@ module.exports = {
       activities: [
         {
           name: `🔗 github.com/dtszwai`,
-          type: `online`,
+          type: ActivityType.Custom,
         },
       ],
     });
