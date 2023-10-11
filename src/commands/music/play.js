@@ -24,11 +24,11 @@ module.exports = {
         ephemeral: true,
       });
     }
+    const { player, playlist } = client;
     const connection = await joinChannel(interaction);
     if (!connection) return;
-    else connection.subscribe(player);
+    else client.connection = connection.subscribe(player);
 
-    const { player, playlist } = client;
     await addMusic(playlist, link);
     if (player.state.status != AudioPlayerStatus.Playing) {
       player.play(playlist.shift());
