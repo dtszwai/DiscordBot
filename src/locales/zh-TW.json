@@ -1,5 +1,5 @@
 {
-  "music.join.joining": "加入 {{channel}}",
+  "music.join.joining": "加入`{{channel}}`",
   "music.pause.paused": "播放器已暫停。",
   "music.pause.alreadyPaused": "播放器已經暫停了。",
   "music.pause.noPlaying": "播放器目前沒有播放任何音樂。",
@@ -11,5 +11,7 @@
   "music.queue.isEmpty": "佇列為空。",
   "music.stop.empty": "已清空佇列。",
   "music.subscribe.selectChannel": "選擇你想要接收通知的頻道。",
-  "music.subscribe.success": "你已訂閱了{{title}}。"
+  "music.subscribe.success": "你已訂閱了`{{title}}`。",
+  "music.unsubscribe.success": "你已取消訂閱`{{channel}}`.",
+  "music.unsubscribe.channelNotFound": "你尚未訂閱`{{channel}}`。"
 }

@@ -1,5 +1,5 @@
 {
-  "music.join.joining": "Joining {{channel}}",
+  "music.join.joining": "Joining `{{channel}}`",
   "music.pause.paused": "The player is now paused.",
   "music.pause.alreadyPaused": "The player is already paused.",
   "music.pause.noPlaying": "The player is not currently playing anything.",
@@ -11,5 +11,7 @@
   "music.queue.isEmpty": "The queue is empty.",
   "music.stop.empty": "The queue has been emptied.",
   "music.subscribe.selectChannel": "Select the channel you want to have notification on.",
-  "music.subscribe.success": "You have subscribed to {{title}}."
+  "music.subscribe.success": "You have subscribed to `{{title}}`.",
+  "music.unsubscribe.success": "You have unsubscribed to `{{channel}}`.",
+  "music.unsubscribe.channelNotFound": "You have not subscribed to `{{channel}}` yet."
 }

@@ -18,4 +18,4 @@ i18next.init({
   },
 });
 
-module.exports = (lng) => i18next.getFixedT("lng");
+module.exports = (lng) => i18next.getFixedT(lng);
