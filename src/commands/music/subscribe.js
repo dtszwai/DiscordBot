@@ -38,7 +38,7 @@ module.exports = {
     }
 
     await interaction.reply({
-      content: `Select the channel you want to have notification on.`,
+      content: client.t(interaction.locale)("music.subscribe.selectChannel"),
       components: [new ActionRowBuilder().addComponents(channelMenu)],
     });
   },

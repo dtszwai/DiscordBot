@@ -8,7 +8,9 @@ module.exports = {
   async execute(interaction, client) {
     if (await joinChannel(interaction)) {
       return await interaction.reply({
-        content: `Joining ${interaction.member.voice.channel.name}`,
+        content: client.t(interaction.locale)("music.join.joining", {
+          channel: interaction.member.voice.channel.name,
+        }),
       });
     }
   },

@@ -4,21 +4,22 @@ module.exports = {
     .setName("pause")
     .setDescription("Pause the player."),
   async execute(interaction, client) {
+    const locale = interaction.locale;
     const player = client.player;
     switch (player._state.status) {
       case "playing":
         player.pause();
-        await interaction.reply("The player is now paused.");
+        await interaction.reply(client.t(locale)("music.pause.paused"));
         break;
       case "paused":
         await interaction.reply({
-          content: "The player is already paused.",
+          content: client.t(locale)("music.pause.alreadyPaused"),
           ephemeral: true,
         });
         break;
       default:
         await interaction.reply({
-          content: "The player is not currently playing anything.",
+          content: client.t(locale)("music.pause.noPlaying"),
           ephemeral: true,
         });
     }

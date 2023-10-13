@@ -9,7 +9,7 @@ const embed = require("../tools/helper/embed");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("play")
-    .setDescription("Play/ Add Youtube music.")
+    .setDescription("Play/ add a Youtube music.")
     .addStringOption((option) =>
       option
         .setName("link")
@@ -17,10 +17,12 @@ module.exports = {
         .setRequired(true)
     ),
   async execute(interaction, client) {
+    const locale = interaction.locale;
     const link = interaction.options.getString("link");
-    if (!isValidate(link)) {
+    const videoInfo = await getInfo(link);
+    if (!isValidate(link) || !videoInfo) {
       return await interaction.reply({
-        content: `No audio could be found for \`${link}\`.`,
+        content: client.t(locale)("music.play.notFound", { link }),
         ephemeral: true,
       });
     }
@@ -37,8 +39,6 @@ module.exports = {
       playlist.length > 0 && player.play(playlist.shift());
     });
 
-    const videoInfo = await getInfo(link);
-
     const _embed = embed({
       title: videoInfo.title,
       color: 0x18e1ee,
@@ -51,7 +51,9 @@ module.exports = {
     });
 
     return await interaction.reply({
-      content: `${interaction.user} has added a song to the queue.`,
+      content: client.t(locale)("music.play.addSong", {
+        user: interaction.user,
+      }),
       embeds: [_embed],
     });
   },

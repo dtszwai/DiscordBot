@@ -9,6 +9,8 @@ module.exports = {
     let connection = getVoiceConnection(interaction.guild.id);
     client.player.stop();
     connection?.disconnect();
-    return await interaction.reply(`The queue has been emptied.`);
+    return await interaction.reply(
+      client.t(interaction.locale)("music.stop.empty")
+    );
   },
 };

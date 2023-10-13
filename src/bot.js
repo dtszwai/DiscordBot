@@ -13,6 +13,7 @@ client.selectMenus = new Collection();
 client.modals = new Collection();
 client.player = createAudioPlayer();
 client.playlist = [];
+client.t = require("./i18n");
 
 const functionFolders = fs.readdirSync(`./src/functions`);
 for (const folder of functionFolders) {

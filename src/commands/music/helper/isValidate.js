@@ -1,14 +1,13 @@
 const play = require("play-dl");
 
 module.exports = (link) => {
+  if (!link.startsWith("http")) return false;
   switch (play.yt_validate(link)) {
     case "video":
     case "playlist":
-      console.log("true");
       return true;
     case "search":
     default:
-      console.log("false");
       return false;
   }
 };

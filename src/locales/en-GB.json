@@ -1,0 +1,15 @@
+{
+  "music.join.joining": "Joining {{channel}}",
+  "music.pause.paused": "The player is now paused.",
+  "music.pause.alreadyPaused": "The player is already paused.",
+  "music.pause.noPlaying": "The player is not currently playing anything.",
+  "music.unpause.notPaused": "The player is not paused.",
+  "music.unpause.unpaused": "The player is now unpaused.",
+  "music.unpause.emptyQueue": "The queue is empty.",
+  "music.play.notFound": "No audio could be found for `{{link}}`.",
+  "music.play.addSong": "<@{{user}}> has added a song to the queue.",
+  "music.queue.isEmpty": "The queue is empty.",
+  "music.stop.empty": "The queue has been emptied.",
+  "music.subscribe.selectChannel": "Select the channel you want to have notification on.",
+  "music.subscribe.success": "You have subscribed to {{title}}."
+}

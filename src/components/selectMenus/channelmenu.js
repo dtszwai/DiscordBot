@@ -32,7 +32,9 @@ module.exports = {
     );
 
     await interaction.update({
-      content: `You have subscribed to ${data.title}.`,
+      content: client.t(interaction.locale)("music.subscribe.success", {
+        title: data.title,
+      }),
       components: [],
     });
   },
