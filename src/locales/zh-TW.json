@@ -1,4 +1,5 @@
 {
+  "music.join.notInChannel": "<@{{user}}>，你必須先進入語音頻道。",
   "music.join.joining": "加入`{{channel}}`",
   "music.pause.paused": "播放器已暫停。",
   "music.pause.alreadyPaused": "播放器已經暫停了。",
@@ -13,5 +14,6 @@
   "music.subscribe.selectChannel": "選擇你想要接收通知的頻道。",
   "music.subscribe.success": "你已訂閱了`{{title}}`。",
   "music.unsubscribe.success": "你已取消訂閱`{{channel}}`.",
-  "music.unsubscribe.channelNotFound": "你尚未訂閱`{{channel}}`。"
+  "music.unsubscribe.channelNotFound": "你尚未訂閱`{{channel}}`。",
+  "music.mostplayed.emptyResult": "你未曾播放任何音樂。"
 }

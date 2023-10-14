@@ -1,4 +1,5 @@
 {
+  "music.join.notInChannel": "<@{{user}}>, You must be in a voice channel first.",
   "music.join.joining": "Joining `{{channel}}`",
   "music.pause.paused": "The player is now paused.",
   "music.pause.alreadyPaused": "The player is already paused.",
@@ -13,5 +14,6 @@
   "music.subscribe.selectChannel": "Select the channel you want to have notification on.",
   "music.subscribe.success": "You have subscribed to `{{title}}`.",
   "music.unsubscribe.success": "You have unsubscribed to `{{channel}}`.",
-  "music.unsubscribe.channelNotFound": "You have not subscribed to `{{channel}}` yet."
+  "music.unsubscribe.channelNotFound": "You have not subscribed to `{{channel}}` yet.",
+  "music.mostplayed.emptyResult": "You have not played any music yet."
 }

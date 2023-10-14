@@ -26,12 +26,13 @@ module.exports = {
         ephemeral: true,
       });
     }
-    const { player, playlist } = client;
+    const { player, playlist, database } = client;
     const connection = await joinChannel(interaction);
     if (!connection) return;
     else client.connection = connection.subscribe(player);
 
-    await addMusic(playlist, link);
+    await addMusic(playlist, videoInfo.url, database);
+
     if (player.state.status != AudioPlayerStatus.Playing) {
       player.play(playlist.shift());
     }

@@ -3,7 +3,10 @@ const { joinVoiceChannel } = require("@discordjs/voice");
 module.exports = async (interaction) => {
   if (!interaction.member.voice.channel) {
     await interaction.reply({
-      content: `${interaction.user}, You must be in a voice channel first.`,
+      content: require("../../../i18n")(interaction.locale)(
+        "music.join.notInChannel",
+        { user: interaction.user }
+      ),
       ephemeral: true,
     });
     return null;
